@@ -2,7 +2,9 @@
 
 <ul>
   <% @restaurants.each do |rest| %>
-    <li><%= rest.name %> - <%= rest.address %> - <%= rest.category %>  </li>
+    <li>  
+      <%= link_to rest.name + " - " + rest.address  + " - " + rest.category, restaurant_path(rest)  %>
+    </li>
   <% end %>
     
 </ul>
